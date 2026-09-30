@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Huy Phong</title>
+</head>
+
+<body>
+
+    <form>
+
+        <h1>Textarea</h1>
+        <br>
+
+        <textarea id="content" maxlength="140"></textarea>
+
+        <p id="countContent">Max 0/140</p>
+
+        <h1>Input Field</h1>
+        <br>
+
+        <input id="username" type="text" maxlength="20">
+
+        <p id="countUsername">Maximum 0/20</p>
+
+    </form>
+
+    <script>
+
+    const content = document.getElementById("content");
+    const username = document.getElementById("username");
+
+    const countContent = document.getElementById("countContent");
+    const countUsername = document.getElementById("countUsername");
+
+    content.oninput = function() {
+        const number = content.value.length;
+        countContent.innerHTML = "Max " + number + "/140";
+    };
+
+    username.oninput = function() {
+        const number = username.value.length;
+        countUsername.innerHTML = "Maximum " + number + "/20";
+    };
+
+</script>
+
+</body>
+</html>
